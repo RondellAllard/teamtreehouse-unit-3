@@ -11,8 +11,8 @@
     <title>Register</title>
   </head>
   <body>
+    <h1 class="main-header">The Code Review</h1>
     <div class="container">
-      <h1 class="main-header">The Code Review</h1>
       <header>
         <h2>Signup for our newsletter</h2>
         <p class="lead">
@@ -126,42 +126,52 @@
           <fieldset>
             <legend>New Letter</legend>
             <label>Select the newsletters you would like to receive</label>
-            <input
-              type="checkbox"
-              id="html_news"
-              name="news_letter"
-              value="html_news"
-            />
-            <label for="html_news" class="inline-label">HTML News</label>
-            <input
-              type="checkbox"
-              id="css_news"
-              name="news_letter"
-              value="css_news"
-            />
-            <label for="css_news" class="inline-label">CSS News</label>
-            <input
-              type="checkbox"
-              id="js_news"
-              name="news_letter"
-              value="js_news"
-            />
-            <label for="js_news" class="inline-label">Javascript News</label>
-            <label>Newsletter format</label>
-            <input
-              type="radio"
-              id="html_format"
-              name="news_format"
-              value="html_format"
-            />
-            <label for="html_format" class="inline-label">HTML</label>
-            <input
-              type="radio"
-              id="plain_text"
-              name="news_format"
-              value="plain_text"
-            />
-            <label for="plain_text" class="inline-label">Plain text</label>
+            <div class="row">
+              <input
+                type="checkbox"
+                id="html_news"
+                name="news_letter"
+                value="html_news"
+              />
+              <label for="html_news" class="inline-label">HTML News</label>
+            </div>
+            <div class="row">
+              <input
+                type="checkbox"
+                id="css_news"
+                name="news_letter"
+                value="css_news"
+              />
+              <label for="css_news" class="inline-label">CSS News</label>
+            </div>
+            <div class="row">
+              <input
+                type="checkbox"
+                id="js_news"
+                name="news_letter"
+                value="js_news"
+              />
+              <label for="js_news" class="inline-label">Javascript News</label>
+              <label>Newsletter format</label>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                id="html_format"
+                name="news_format"
+                value="html_format"
+              />
+              <label for="html_format" class="inline-label">HTML</label>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                id="plain_text"
+                name="news_format"
+                value="plain_text"
+              />
+              <label for="plain_text" class="inline-label">Plain text</label>
+            </div>
             <label for="other_topics"
               >Other topics you'd like to hear about</label
             >

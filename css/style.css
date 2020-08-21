@@ -13,14 +13,72 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 /* Base Style */
 body {
   font-family: "Merriweather", serif;
+  color: var(--secondary-color);
+}
+/* Text formating */
+h2 {
+  text-align: center;
+}
+
+h2,
+legend {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--main-color);
+  padding: 1rem 0;
+}
+
+legend {
+  border-top: solid var(--main-color) 2px;
+  width: 100%;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #999;
+  text-align: center;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #999;
+  text-align: left;
+  margin: 0.5rem 0rem;
+}
+
+/* Spacing */
+.container,
+header,
+form {
+  padding: 0 1rem 0 1rem;
+}
+
+fieldset {
+  border: 0;
+}
+
+/* Input formating */
+input,
+textarea {
+  width: 100%;
+  background-color: var(--secondary-bg-color);
+  border: 0;
+  border-radius: 5px;
+  padding: 1.5rem;
 }
 
 input:focus,
 textarea:focus {
   border: var(--main-color) 3px solid;
+  outline: none;
 }
 
 input:focus::placeholder,
@@ -33,9 +91,66 @@ textarea::placeholder {
   text-align: right;
 }
 
+input[type="radio"] input[type="checkbox"] {
+}
+
+label:not([for]) {
+  margin-bottom: 1rem;
+}
 /* Form Layout*/
 form,
 fieldset {
   display: flex;
   flex-direction: column;
+}
+
+/* Page Styling */
+/* Header */
+.main-header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+header .lead {
+  border-bottom: var(--main-color) solid 5px;
+  padding: 0rem 2rem 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Main */
+fieldset input:last-child,
+fieldset textarea:last-child {
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 100%;
+  height: 8rem;
+}
+
+button[type="submit"] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  width: 100%;
+  height: 5rem;
+  color: #fff;
+  background-color: turquoise;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 5rem;
 }
