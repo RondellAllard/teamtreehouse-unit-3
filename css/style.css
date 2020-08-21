@@ -1,0 +1,41 @@
+/* Variables */
+:root {
+  --main-color: darkblue;
+  --secondary-color: grey;
+  --main-bg-color: #fff;
+  --secondary-bg-color: #999;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Style */
+body {
+  font-family: "Merriweather", serif;
+}
+
+input:focus,
+textarea:focus {
+  border: var(--main-color) 3px solid;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-align: right;
+}
+
+/* Form Layout*/
+form,
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
