@@ -91,7 +91,8 @@ textarea::placeholder {
   text-align: right;
 }
 
-input[type="radio"] input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
 }
 
 label:not([for]) {
