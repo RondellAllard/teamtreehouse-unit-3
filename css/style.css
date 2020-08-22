@@ -35,23 +35,10 @@ legend {
   padding: 1rem 0;
 }
 
-legend {
-  border-top: solid var(--main-color) 2px;
-  width: 100%;
-}
-
 .lead {
   font-size: 1.2rem;
   color: #999;
   text-align: center;
-}
-
-label {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #999;
-  text-align: left;
-  margin: 0.5rem 0rem;
 }
 
 /* Spacing */
@@ -59,6 +46,7 @@ label {
 header,
 form {
   padding: 0 1rem 0 1rem;
+  margin: auto;
 }
 
 fieldset {
@@ -67,8 +55,8 @@ fieldset {
 
 /* Input formating */
 input,
-textarea {
-  width: 100%;
+textarea,
+select {
   background-color: var(--secondary-bg-color);
   border: 0;
   border-radius: 5px;
@@ -76,7 +64,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border: var(--main-color) 3px solid;
   outline: none;
 }
@@ -91,10 +80,6 @@ textarea::placeholder {
   text-align: right;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-}
-
 label:not([for]) {
   margin-bottom: 1rem;
 }
@@ -103,6 +88,33 @@ form,
 fieldset {
   display: flex;
   flex-direction: column;
+}
+
+fieldset > *:not(legend),
+.row {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.wide-row {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 auto 2rem;
+}
+
+.row {
+  display: flex;
+}
+
+.row input {
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+.row label {
+  padding: 0;
+  margin: 0;
 }
 
 /* Page Styling */
@@ -125,9 +137,22 @@ header .lead {
 }
 
 /* Main */
-fieldset input:last-child,
-fieldset textarea:last-child {
-  margin-bottom: 2rem;
+
+main legend {
+  border-top: solid var(--main-color) 2px;
+  width: 100%;
+}
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #999;
+  text-align: left;
+  margin: 0.5rem 0rem;
+}
+
+input[name="user_zipcode"] {
+  width: 10rem;
+  margin-left: 2.5%;
 }
 
 textarea {
@@ -138,8 +163,9 @@ textarea {
 button[type="submit"] {
   font-size: 1.5rem;
   font-family: "Merriweather", serif;
-  width: 100%;
+  width: 95%;
   height: 5rem;
+  margin: auto;
   color: #fff;
   background-color: turquoise;
   border-radius: 5px;
@@ -154,4 +180,35 @@ footer {
   align-items: center;
   text-align: center;
   height: 5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Untility */
+  .container {
+    max-width: 800px;
+  }
+  /* Form, Main */
+  .wide-row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+  }
+
+  label {
+    margin-right: auto;
+    align-self: flex-start;
+  }
+
+  label[for="zipcode"] {
+    align-self: center;
+  }
+
+  #zipcode {
+    width: 10rem;
+  }
+  .wide-row input,
+  .wide-row select {
+    width: 70%;
+  }
 }
