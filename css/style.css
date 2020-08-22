@@ -76,6 +76,8 @@ textarea:focus,
 select:focus {
   border: var(--main-color) 3px solid;
   outline: none;
+  transition: 1s;
+  background-color: #ffffdd;
 }
 
 input:focus::placeholder,
@@ -145,11 +147,24 @@ header .lead {
 }
 
 /* Main */
+fieldset:nth-child(1) {
+  background-color: wheat;
+  border-bottom: solid var(--main-color) 2px;
+}
 
 main legend {
   border-top: solid var(--main-color) 2px;
   width: 100%;
 }
+
+legend:first-child {
+  background-color: wheat;
+}
+
+.white {
+  background-color: #fff !important;
+}
+
 label {
   font-size: 1rem;
   font-weight: 500;
