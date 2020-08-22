@@ -1,3 +1,11 @@
+/* Changes to make.
+Fix Colors
+Change the arrow image, you can do this with fontawesome
+Align input cells with label better
+Align zip code input to the left
+Make margin bottom after textarea larger.
+ */
+
 /* Variables */
 :root {
   --main-color: darkblue;
