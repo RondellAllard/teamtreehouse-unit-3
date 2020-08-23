@@ -175,7 +175,6 @@ label {
 
 input[name="user_zipcode"] {
   width: 10rem;
-  margin-left: 2.5%;
 }
 
 textarea {
@@ -219,7 +218,8 @@ footer {
   }
 
   label {
-    margin-right: auto;
+    width: 130px;
+    margin-right: 115px;
     align-self: flex-start;
   }
 
@@ -229,6 +229,7 @@ footer {
 
   #zipcode {
     width: 10rem;
+    margin-left: 0;
   }
   .wide-row input,
   .wide-row select {
@@ -240,6 +241,6 @@ footer {
   }
 
   label[for="zipcode"] {
-    margin-right: 115px;
+    margin-right: 104px;
   }
 }
