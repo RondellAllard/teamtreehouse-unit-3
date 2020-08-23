@@ -234,4 +234,12 @@ footer {
   .wide-row select {
     width: 70%;
   }
+
+  .wide-row:last-child {
+    justify-content: flex-start;
+  }
+
+  label[for="zipcode"] {
+    margin-right: 115px;
+  }
 }
